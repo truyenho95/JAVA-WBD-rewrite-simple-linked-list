@@ -211,9 +211,8 @@ public class MyLinkedList<E> {
     return this.size;
   }
 
-  public Object clone() {
-    try {
-      MyLinkedList<E> clone = (MyLinkedList<E>) super.clone();
+  public MyLinkedList<E> clone() {
+      MyLinkedList<E> clone = new MyLinkedList<E>();
 
       // Put clone into "virgin" state
       clone.first = clone.last = null;
@@ -223,10 +222,6 @@ public class MyLinkedList<E> {
       for (Point<E> x = first; x != null; x = x.next)
         clone.add(x.item);
       return clone;
-
-    } catch (CloneNotSupportedException e) {
-      throw new InternalError(e);
-    }
   }
 
   // Search Operations

@@ -6,7 +6,9 @@ public class MyLinkedListTest {
     myLinkedList.addLast("e5");
     myLinkedList.add(2,"s12");
     myLinkedList.add(4,"v21");
-//    myLinkedList.add(10,35); throw error
+    MyLinkedList<String> myLinkedListClone = myLinkedList.clone();
+    //    myLinkedList.add(10,35); throw error
+
     for (int i = 0; i < myLinkedList.size(); i++) {
       System.out.println(myLinkedList.get(i));
     }
@@ -23,5 +25,10 @@ public class MyLinkedListTest {
     System.out.println(myLinkedList.contains("m2"));
     System.out.println(myLinkedList.getFirst());
     System.out.println(myLinkedList.getLast());
+    System.out.println("***");
+
+    for (int i = 0; i < myLinkedListClone.size(); i++) {
+      System.out.println(myLinkedListClone.get(i));
+    }
   }
 }
